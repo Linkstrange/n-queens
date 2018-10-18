@@ -1,0 +1,4 @@
+pytest
+numpy==1.15.2
+psycopg2==2.7.5
+SQLAlchemy==1.2.12
