@@ -3,12 +3,12 @@ Solution for the n-queens problem
 
 [![Build Status](https://travis-ci.org/Linkstrange/n-queens.svg?branch=master)](https://travis-ci.org/Linkstrange/n-queens)
 
-###Setup
+## Setup
 Run solutions.sql script included under postgres folder to setup the database. The solver will try to connect to a database called nQueens with the user postgres and no password on localhost:5432, so it is recommended to create a database with those characteristics first.
 
 The setup will be easier on future releases, by allowing the use of configuration files. 
 
-###Running
+## Running
 
 Installing dependencies
 ```python
@@ -20,7 +20,7 @@ Running the solver for n=8
 python main.py 8
 ```
 
-###Sample output
+## Sample output
 The output will be a text representation for all found solutions, also the elapsed time it took to found those solutions.
 ```
 ...
