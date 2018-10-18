@@ -1,6 +1,7 @@
 import pytest
 import n_queens
 import queens_board
+from timeit import default_timer as timer
 
 
 # From https://en.wikipedia.org/wiki/Eight_queens_puzzle#Counting_solutions
@@ -17,7 +18,14 @@ import queens_board
 def test_n_queens(n, n_solutions):
     board = queens_board.Board(n)
     solver = n_queens.Solver(board)
-    solver.solve_n_queens()
 
+    start = timer()
+    solver.solve_n_queens()
+    end = timer()
+
+    print(f'Elapsed time {end - start} seconds')
     solution_count = solver.get_solutions_count()
-    assert solution_count == n_solutions
+    print(f'Expected solutions: {n_solutions}, Got: {solution_count} solutions')
+    assert solution_count == n_solutions, "Wrong number of solutions"
+    print('Solutions are correct')
+
