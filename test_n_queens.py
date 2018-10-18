@@ -20,4 +20,7 @@ def test_n_queens(n, n_solutions):
     solver.solve_n_queens()
 
     solution_count = solver.get_solutions_count()
-    assert solution_count == n_solutions
+    print(f'Expected solutions: {n_solutions}, Got: {solution_count} solutions')
+    assert solution_count == n_solutions, "Wrong number of solutions"
+    print('Solutions are correct')
+
