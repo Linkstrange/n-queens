@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 def __get_database_connection_data__():
     return 'postgresql://{0}:{1}@{2}/{3}'.format(
         'postgres',
-        'root',
+        '',
         'localhost:5432',
         'nQueens')
 
