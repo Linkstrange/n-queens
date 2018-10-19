@@ -1,5 +1,5 @@
 # n-queens
-Solution for the n-queens problem
+Solution for the n-queens problem: https://en.wikipedia.org/wiki/Eight_queens_puzzle
 
 [![Build Status](https://travis-ci.org/Linkstrange/n-queens.svg?branch=master)](https://travis-ci.org/Linkstrange/n-queens)
 
