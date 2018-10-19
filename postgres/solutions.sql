@@ -1,22 +1,10 @@
-﻿-- Schema: public
-
--- DROP SCHEMA public;
-
-CREATE SCHEMA public
-  AUTHORIZATION postgres;
-
-GRANT ALL ON SCHEMA public TO postgres;
-GRANT ALL ON SCHEMA public TO public;
-COMMENT ON SCHEMA public
-  IS 'standard public schema';
-
--- Table: public.solutions
+﻿-- Table: public.solutions
 
 -- DROP TABLE public.solutions;
 
 CREATE TABLE public.solutions
 (
-  solution_id bigint NOT NULL DEFAULT nextval('solutions_solution_id_seq'::regclass), -- A unique id for this solution
+  solution_id bigserial, -- A unique id for this solution
   board_size smallint, -- Size of the board this solution applies to
   solution_ordinal integer, -- Order in wich this solution was stored
   board_hash bigint, -- Hash for the board that has this solution to avoid duplicates
@@ -35,14 +23,13 @@ COMMENT ON COLUMN public.solutions.board_size IS 'Size of the board this solutio
 COMMENT ON COLUMN public.solutions.solution_ordinal IS 'Order in wich this solution was stored';
 COMMENT ON COLUMN public.solutions.board_hash IS 'Hash for the board that has this solution to avoid duplicates';
 
-
 -- Table: public.placements
 
 -- DROP TABLE public.placements;
 
 CREATE TABLE public.placements
 (
-  placement_id bigint NOT NULL DEFAULT nextval('placements_placement_id_seq'::regclass), -- Id for this placement
+  placement_id bigserial, -- Id for this placement
   solution_id bigint, -- Id of the solution this placement belongs to
   "row" smallint,
   "column" smallint,

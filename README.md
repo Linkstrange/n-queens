@@ -4,9 +4,9 @@ Solution for the n-queens problem
 [![Build Status](https://travis-ci.org/Linkstrange/n-queens.svg?branch=master)](https://travis-ci.org/Linkstrange/n-queens)
 
 ## Setup
-Run solutions.sql script included under postgres folder to setup the database. The solver will try to connect to a database called nQueens with the user postgres and no password on localhost:5432, so it is recommended to create a database with those characteristics first.
+No needed setup if you want to use the public database specified in the config.ini file
 
-The setup will be easier on future releases, by allowing the use of configuration files. 
+If you want to setup your own database, run solutions.sql script included under postgres folder to setup the tables needed. You will need to specify the details of your database in the config.ini file
 
 ## Running
 

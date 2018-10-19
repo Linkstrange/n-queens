@@ -32,7 +32,9 @@ def main(n):
             mapped_solution = mapper.map_solution(solutions[j], j + 1)
             try:
                 dal.save_solution(mapped_solution)
+                print(f'Saved solution {j+1} for n={i+1} to database')
             except exc.IntegrityError:
+                print(f'Solution {j+1} for n={i+1} already exists in database')
                 dal.rollback()
 
     dal.finish_session()
