@@ -21,7 +21,7 @@ python main.py 8
 ```
 
 ## Sample output
-The output will be a text representation for all found solutions, also the elapsed time it took to found those solutions.
+The output will be a text representation for all found solutions, also the elapsed time it took to find those solutions.
 ```
 ...
 _|_|_|Q|_|_|_|_|
