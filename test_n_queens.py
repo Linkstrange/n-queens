@@ -1,6 +1,6 @@
 import pytest
-import n_queens
-import queens_board
+import n_queens_solver
+import n_queens_board
 from timeit import default_timer as timer
 
 
@@ -16,8 +16,8 @@ from timeit import default_timer as timer
     (10, 724)
 ])
 def test_n_queens(n, n_solutions):
-    board = queens_board.Board(n)
-    solver = n_queens.Solver(board)
+    board = n_queens_board.NQueensBoard(n)
+    solver = n_queens_solver.NQueensSolver(board)
 
     start = timer()
     solver.solve_n_queens()

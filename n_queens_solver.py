@@ -1,5 +1,5 @@
 # A class  that can solve the n queens problem given a specific board
-class Solver:
+class NQueensSolver:
     def __init__(self, board):
         self.solutions = []
 

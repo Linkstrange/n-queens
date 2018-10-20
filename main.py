@@ -1,6 +1,6 @@
-import n_queens
-import queens_board
-import dal.mapper as mapper
+import n_queens_solver
+import n_queens_board
+import dal.mappers as mapper
 import dal.n_queens_data_access as data_access
 from timeit import default_timer as timer
 from sys import argv
@@ -14,8 +14,8 @@ def main(n):
     start = timer()
 
     for i in range(n):
-        board = queens_board.Board(i + 1)
-        solver = n_queens.Solver(board)
+        board = n_queens_board.NQueensBoard(i + 1)
+        solver = n_queens_solver.NQueensSolver(board)
         solver.solve_n_queens()
         solutions_array.append(solver.solutions)
 

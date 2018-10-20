@@ -3,7 +3,7 @@ from copy import deepcopy
 
 
 # A chess board used for the problem of n-queens, this board does not have regular chess board characteristics
-class Board:
+class NQueensBoard:
     def __init__(self, n):
         self._n = n
 
